@@ -1,0 +1,92 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks</title>
+        <link rel="stylesheet" href="fonts/avenir-next/stylesheet.css">
+        <link rel="stylesheet" href="fonts/segoe-print/stylesheet.css">
+        <link rel="stylesheet" href="icons/style.css">
+        <link rel="stylesheet" href="css/window.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/selection_panel.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/window.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/selection_panel.js"></script>
+        <script src="js/generation.js"></script>
+        <script src="js/editing.js"></script>
+        <script src="js/application.js"></script>
+		<script src="js/main.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="title" class="x-gradient-font">
+                <span style="font-size: 80px;">NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks</span>
+            </div>
+            <div id="authors">
+                <div>
+                  <a class="link" href="https://jamesyjl.github.io/">Junliang Ye</a>
+                  <sup>1</sup><sup style="font-size:.8em;">*</sup>
+                </div>
+                <div>
+                  <a class="link" href="https://shxie2020.github.io/">Shenghao Xie</a>
+                  <sup>2,1</sup><sup style="font-size:.8em;">*</sup>
+                </div>
+                <div><a class="link" href="https://zhaorw02.github.io/">Ruowen Zhao</a><sup>1</sup></div>
+                <div><a class="link" href="https://thuwzy.github.io/">Zhengyi Wang</a><sup>1</sup></div>
+                <div><a class="link" href="https://scholar.google.com/citations?user=TeKnXhkAAAAJ&hl=zh-CN&oi=ao">Hongyu Yan</a><sup>3</sup></div>
+                <div><a class="link" href="https://scholar.google.com/citations?user=wTMYEq4AAAAJ&hl=zh-CN&oi=ao">Wenqiang Zu</a><sup>4</sup></div>
+                <div>
+                  <a class="link" href="https://www.ai.pku.edu.cn/info/1139/1341.htm">Lei Ma</a>
+                  <sup>2</sup><sup style="font-size:0.8em; vertical-align:super;">✉</sup>
+                </div>
+                <div>
+                  <a class="link" href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml">Jun Zhu</a>
+                  <sup>1</sup><sup style="font-size:0.8em; vertical-align:super;">✉</sup>
+                </div>  
+                <br>
+                <div id="institution">
+                    <div><sup>1</sup><a class="link" href="https://www.tsinghua.edu.cn/en/">THU</a></div>
+                    <div><sup>2</sup><a class="link" href="https://www.pku.edu.cn/">PKU</a></div>
+                    <div><sup>3</sup><a class="link" href="https://hkust.edu.hk/">HKUST</a></div>
+                    <div><sup>4</sup><a class="link" href="http://www.ia.cas.cn/">CASIA</a></div>
+                  </div>
+			<div id="notes" style="text-align:center; margin-top:10px;">
+                <span><sup style="font-size:0.8em;">*</sup> <span style="font-weight:500;">Equal contribution</span></span>
+                <span style="margin-left:20px; font-weight:500;">
+                  <span style="vertical-align:super; font-size:0.8em;">✉</span> Corresponding author
+                </span>
+              </div>
+              <div id="links">
+                <div><a id="paper" href="https://github.com/JAMESYJL/Nano3D">Paper</a></div>
+                <div><a id="code" href="https://github.com/JAMESYJL/Nano3D">Code</a></div>
+				<div><a id="dataset" href="https://github.com/JAMESYJL/Nano3D">Dataset</a></div>
+                <div><a id="demo" href="https://github.com/JAMESYJL/Nano3D">Demo</a></div>
+            </div>
+            <div class="x-center-text" style="font-size: 20px; font-weight: 500; color: #3f3f3f;">
+                <b>TL;DR:</b> We introduce <i><b>3DEditVerse</b></i>, the largest paired 3D editing benchmark, and propose <i><b>3DEditFormer</b></i>, a mask-free transformer enabling precise, consistent, and scalable 3D edits.
+            </div>
+            <div id="abstract" class="x-gradient-block">
+                3D editing—the task of locally modifying the geometry or appearance of a 3D asset—has wide applications in immersive content creation, digital entertainment, and AR/VR. However, unlike 2D editing, it remains challenging due to the need for cross-view consistency, structural fidelity, and fine-grained controllability. Existing approaches are often slow, prone to geometric distortions, or dependent on manual and accurate 3D masks that are error-prone and impractical.  To address these challenges, we advance both the data and model fronts. On the data side, we introduce <strong>3DEditVerse</strong>, the largest paired 3D editing benchmark to date, comprising 116,309 high-quality training pairs and 1,500 curated test pairs. Built through complementary pipelines of pose-driven geometric edits, foundation model-guided appearance edits, and human validation, 3DEditVerse ensures edit locality, multi-view consistency, and semantic alignment.  On the model side, we propose <strong>3DEditFormer</strong>, a 3D-structure-preserving conditional transformer. By enhancing image-to-3D generation with dual-guidance attention and time-adaptive gating, 3DEditFormer disentangles editable regions from preserved structure, enabling precise and consistent edits without requiring auxiliary 3D masks.  Extensive experiments demonstrate that our framework outperforms state-of-the-art baselines both quantitatively and qualitatively, establishing a new standard for practical and scalable 3D editing. Dataset and code will be released.
+            </div>
+
+            <div class="x-section-title"><div class="x-gradient-font">3DEditVerse Dataset</div></div>
+            <p class="x-note">
+                <i>* Generative Data from Text-Guided Editing are shown in the video.</i>
+            </p>
+            <p class="x-note">
+                <i>Our <strong>3DEditVerse</strong>, the largest paired 3D editing benchmark to date, comprising 116,309 high-quality training pairs and 1,500 curated test pairs. Built through complementary pipelines of pose-driven geometric edits, foundation model-guided appearance edits, and human validation, 3DEditVerse ensures edit locality, multi-view consistency, and semantic alignment.</i>
+            </p>
+
+            <div class="x-section-title"><div class="x-gradient-font">3DEditFormer <span style="font-size: 40px; font-weight:600;">|</span> Comparison with SoTA VoxHammer</div></div>
+            <p>Click on the cards to view extracted GLB files.</p>
+            <div id="results-edit2"></div>
+            
+            <p >
+                The website template is borrowed from <a href="https://github.com/microsoft/TRELLIS/tree/website">TRELLIS</a>.
+            </p>
+        </div>
+        
+    </body>
+</html>
