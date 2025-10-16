@@ -328,7 +328,7 @@ function edit_modelviewer_window_template(item, panel, config) {
                         <div class="x-gradient-font">Nano3D (Ours)</div>
                     </div>
                     <model-viewer
-                        id="modelviewer3"
+                        id="modelviewer2"
                         src="${item.model2}"
                         camera-controls
                         tone-mapping="natural"
