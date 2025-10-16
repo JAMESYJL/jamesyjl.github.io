@@ -65,6 +65,7 @@ function hideTexture() {
     let geometryButton = document.getElementById('geometry-button');
     appearanceButton.classList.remove('checked');
     geometryButton.classList.add('checked');
+
     let modelViewer = document.getElementById('modelviewer');
     if (modelViewer.model.materials[0].pbrMetallicRoughness.baseColorTexture.texture === null) return;
     window_state.textures = [];
@@ -91,14 +92,14 @@ function hideTexture() {
     }
     modelViewer2.exposure = 5;
 
-    let modelViewer3 = document.getElementById('modelviewer3');
-    if (modelViewer3 && modelViewer3.model.materials[0].pbrMetallicRoughness.baseColorTexture.texture === null) {
-        modelViewer3.environmentImage = 'assets_glb/env_maps/white.jpg';
-        for (let i = 0; i < modelViewer3.model.materials.length; i++) {
-            modelViewer3.model.materials[i].pbrMetallicRoughness.baseColorTexture.setTexture(window_state.textures3[i]);
-        }
-        modelViewer3.exposure = window_state.exposure;
-    }
+    // let modelViewer3 = document.getElementById('modelviewer3');
+    // if (modelViewer3 && modelViewer3.model.materials[0].pbrMetallicRoughness.baseColorTexture.texture === null) {
+    //     modelViewer3.environmentImage = 'assets_glb/env_maps/white.jpg';
+    //     for (let i = 0; i < modelViewer3.model.materials.length; i++) {
+    //         modelViewer3.model.materials[i].pbrMetallicRoughness.baseColorTexture.setTexture(window_state.textures3[i]);
+    //     }
+    //     modelViewer3.exposure = window_state.exposure;
+    // }
 }
 
 
@@ -123,13 +124,13 @@ function showTexture() {
     }
     modelViewer2.exposure = window_state.exposure;
 
-    let modelViewer3 = document.getElementById('modelviewer3');
-    if (modelViewer3.model.materials[0].pbrMetallicRoughness.baseColorTexture.texture !== null) return;
-    modelViewer3.environmentImage = 'assets_glb/env_maps/white.jpg';
-    for (let i = 0; i < modelViewer3.model.materials.length; i++) {
-        modelViewer3.model.materials[i].pbrMetallicRoughness.baseColorTexture.setTexture(window_state.textures3[i]);
-    }
-    modelViewer3.exposure = window_state.exposure;
+    // let modelViewer3 = document.getElementById('modelviewer3');
+    // if (modelViewer3.model.materials[0].pbrMetallicRoughness.baseColorTexture.texture !== null) return;
+    // modelViewer3.environmentImage = 'assets_glb/env_maps/white.jpg';
+    // for (let i = 0; i < modelViewer3.model.materials.length; i++) {
+    //     modelViewer3.model.materials[i].pbrMetallicRoughness.baseColorTexture.setTexture(window_state.textures3[i]);
+    // }
+    // modelViewer3.exposure = window_state.exposure;
 }
 
 
@@ -269,15 +270,29 @@ function downloadGLB() {
 }
 
 
+// function edit_asset_panel_template(prompt, text) {
+//     return `
+//         <div class="x-section-title small" style="display:flex; align-items:center; gap:1.0em;">
+//             <div class="x-gradient-font">Prompt</div>
+//             <span>${text}</span>
+//         </div>
+//         <div class="modelviewer-panel-prompt">
+//             ${prompt}
+//         </div>
+//         <div class="x-section-title small"><div class="x-gradient-font">Display Mode</div></div>
+//         <div class="x-left-align">
+//             <div id="appearance-button" class="modelviewer-panel-button small checked" onclick="showTexture()">Appearance</div>
+//             <div id="geometry-button" class="modelviewer-panel-button small" onclick="hideTexture()">Geometry</div>
+//         </div>
+//         <div class="x-flex-spacer"></div>
+//     `;
+// }
+
 function edit_asset_panel_template(prompt, text) {
     return `
-        <div class="x-section-title small" style="display:flex; align-items:center; gap:1.0em;">
-            <div class="x-gradient-font">Prompt</div>
-            <span>${text}</span>
-        </div>
-        <div class="modelviewer-panel-prompt">
+         <div class="modelviewer-panel-prompt">
             ${prompt}
-        </div>
+         </div>
         <div class="x-section-title small"><div class="x-gradient-font">Display Mode</div></div>
         <div class="x-left-align">
             <div id="appearance-button" class="modelviewer-panel-button small checked" onclick="showTexture()">Appearance</div>
@@ -310,11 +325,11 @@ function edit_modelviewer_window_template(item, panel, config) {
                 </div>
                 <div class="modelviewer-container" style="width: ${viewer_size * 0.65}px;">
                     <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
-                        <div class="x-gradient-font">3DEditFormer (Ours)</div>
+                        <div class="x-gradient-font">Nano3D (Ours)</div>
                     </div>
                     <model-viewer
                         id="modelviewer3"
-                        src="${item.model3}"
+                        src="${item.model2}"
                         camera-controls
                         tone-mapping="natural"
                         shadow-intensity="1"

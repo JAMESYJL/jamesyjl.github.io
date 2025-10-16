@@ -22,7 +22,7 @@
     <body>
         <div id="main">
             <div id="title" class="x-gradient-font">
-                <span style="font-size: 80px;">NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks</span>
+                <span style="font-size: 50px;">NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks</span>
             </div>
             <div id="authors">
                 <div>
@@ -41,11 +41,9 @@
                   <a class="link" href="https://www.ai.pku.edu.cn/info/1139/1341.htm">Lei Ma</a>
                   <sup>2</sup><sup style="font-size:0.8em; vertical-align:super;">✉</sup>
                 </div>
-                <div>
                   <a class="link" href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml">Jun Zhu</a>
                   <sup>1</sup><sup style="font-size:0.8em; vertical-align:super;">✉</sup>
                 </div>  
-                <br>
                 <div id="institution">
                     <div><sup>1</sup><a class="link" href="https://www.tsinghua.edu.cn/en/">THU</a></div>
                     <div><sup>2</sup><a class="link" href="https://www.pku.edu.cn/">PKU</a></div>
@@ -61,30 +59,32 @@
               <div id="links">
                 <div><a id="paper" href="https://github.com/JAMESYJL/Nano3D">Paper</a></div>
                 <div><a id="code" href="https://github.com/JAMESYJL/Nano3D">Code</a></div>
-				<div><a id="dataset" href="https://github.com/JAMESYJL/Nano3D">Dataset</a></div>
+				        <div><a id="dataset" href="https://github.com/JAMESYJL/Nano3D">Dataset</a></div>
                 <div><a id="demo" href="https://github.com/JAMESYJL/Nano3D">Demo</a></div>
             </div>
-            <div class="x-center-text" style="font-size: 20px; font-weight: 500; color: #3f3f3f;">
-                <b>TL;DR:</b> We introduce <i><b>3DEditVerse</b></i>, the largest paired 3D editing benchmark, and propose <i><b>3DEditFormer</b></i>, a mask-free transformer enabling precise, consistent, and scalable 3D edits.
-            </div>
+            <img src="assets_glb/teaser.png" style="width:80%; display:block; margin:30px auto; border-radius:10px;">
             <div id="abstract" class="x-gradient-block">
-                3D editing—the task of locally modifying the geometry or appearance of a 3D asset—has wide applications in immersive content creation, digital entertainment, and AR/VR. However, unlike 2D editing, it remains challenging due to the need for cross-view consistency, structural fidelity, and fine-grained controllability. Existing approaches are often slow, prone to geometric distortions, or dependent on manual and accurate 3D masks that are error-prone and impractical.  To address these challenges, we advance both the data and model fronts. On the data side, we introduce <strong>3DEditVerse</strong>, the largest paired 3D editing benchmark to date, comprising 116,309 high-quality training pairs and 1,500 curated test pairs. Built through complementary pipelines of pose-driven geometric edits, foundation model-guided appearance edits, and human validation, 3DEditVerse ensures edit locality, multi-view consistency, and semantic alignment.  On the model side, we propose <strong>3DEditFormer</strong>, a 3D-structure-preserving conditional transformer. By enhancing image-to-3D generation with dual-guidance attention and time-adaptive gating, 3DEditFormer disentangles editable regions from preserved structure, enabling precise and consistent edits without requiring auxiliary 3D masks.  Extensive experiments demonstrate that our framework outperforms state-of-the-art baselines both quantitatively and qualitatively, establishing a new standard for practical and scalable 3D editing. Dataset and code will be released.
+                3D object editing is essential for interactive content creation in gaming, animation, and robotics, 
+                yet current approaches remain inefficient, inconsistent, and often fail to preserve unedited regions. 
+                Most methods rely on editing multi-view renderings followed by reconstruction, which introduces artifacts and limits practicality. 
+                To address these challenges, we propose  <strong>Nano3D</strong>, a training-free framework for precise and coherent 3D object editing without masks. 
+                Nano3D integrates FlowEdit into TRELLIS to perform localized edits guided by front-view renderings, 
+                and further introduces region-aware merging strategies, Voxel/Slat-Merge, 
+                which adaptively preserve structural fidelity by ensuring consistency between edited and unedited areas. 
+                Experiments demonstrate that Nano3D achieves superior 3D consistency and visual quality compared with existing methods. 
+                Based on this framework, we construct the first large-scale 3D editing datasets <strong>Nano3D-Edit-100k</strong>, 
+                which contains over 100,000 high-quality 3D editing pairs. 
+                This work addresses long-standing challenges in both algorithm design and data availability, 
+                significantly improving the generality and reliability of 3D editing, 
+                and laying the groundwork for the development of feed-forward 3D editing models.
             </div>
 
-            <div class="x-section-title"><div class="x-gradient-font">3DEditVerse Dataset</div></div>
-            <p class="x-note">
-                <i>* Generative Data from Text-Guided Editing are shown in the video.</i>
-            </p>
-            <p class="x-note">
-                <i>Our <strong>3DEditVerse</strong>, the largest paired 3D editing benchmark to date, comprising 116,309 high-quality training pairs and 1,500 curated test pairs. Built through complementary pipelines of pose-driven geometric edits, foundation model-guided appearance edits, and human validation, 3DEditVerse ensures edit locality, multi-view consistency, and semantic alignment.</i>
-            </p>
-
-            <div class="x-section-title"><div class="x-gradient-font">3DEditFormer <span style="font-size: 40px; font-weight:600;">|</span> Comparison with SoTA VoxHammer</div></div>
+            <div class="x-section-title"><div class="x-gradient-font">Nano3D <span style="font-size: 40px; font-weight:600;">|</span> Comparison Before and After Editing</div></div>
             <p>Click on the cards to view extracted GLB files.</p>
             <div id="results-edit2"></div>
             
             <p >
-                The website template is borrowed from <a href="https://github.com/microsoft/TRELLIS/tree/website">TRELLIS</a>.
+                The website template is borrowed from <a href="https://www.lv-lab.org/3DEditFormer/">TRELLIS</a>.
             </p>
         </div>
         

@@ -9,7 +9,7 @@ var variants_items = [
             { video: "T_4.mp4", desc: "Blue Matel, Leather", prompt: 'Rugged, metallic with leather straps and a blue accent, resembling a medieval weapon.', model: "T_4.glb" },
             { video: "T_5.mp4", desc: "Fiery Orange", prompt: 'Fiery, orange design with a smooth texture, appearing engulfed in animated flames.', model: "T_5.glb" },
             { video: "T_6.mp4", desc: "Transparent Glass", prompt: 'Transparent, glass like structure, suggesting a high tech design.', model: "T_6.glb" },
-            { video: "T_7.mp4", desc: "Golden Geometric", prompt: 'Smooth, golden surface with a shiny, reflective finish and geometric shapes.', model: "T_7.glb" },
+            { video: "T_7.mp4", desc: "Golden metric", prompt: 'Smooth, golden surface with a shiny, reflective finish and geometric shapes.', model: "T_7.glb" },
             { video: "T_8.mp4", desc: "Colorful Polka-Dot", prompt: 'Colorful, polka-dotted with a smooth, glossy finish and fluffy, purple trim.', model: "T_8.glb" },
             { video: "T_9.mp4", desc: "Engraved Stone", prompt: 'Smooth, stone-like texture with engraved patterns and a mystical design.', model: "T_9.glb" },
         ]
