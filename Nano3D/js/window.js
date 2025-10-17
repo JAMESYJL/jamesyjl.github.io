@@ -288,17 +288,41 @@ function downloadGLB() {
 //     `;
 // }
 
+// function edit_asset_panel_template(prompt, text) {
+//     return `
+//          <div class="modelviewer-panel-prompt">
+//             ${prompt}
+//          </div>
+//         <div class="x-section-title small"><div class="x-gradient-font">Display Mode</div></div>
+//         <div class="x-left-align">
+//             <div id="appearance-button" class="modelviewer-panel-button small checked" onclick="showTexture()">Appearance</div>
+//             <div id="geometry-button" class="modelviewer-panel-button small" onclick="hideTexture()">Geometry</div>
+//         </div>
+//         <div class="x-flex-spacer"></div>
+//     `;
+// }
+
 function edit_asset_panel_template(prompt, text) {
     return `
-         <div class="modelviewer-panel-prompt">
-            ${prompt}
-         </div>
-        <div class="x-section-title small"><div class="x-gradient-font">Display Mode</div></div>
-        <div class="x-left-align">
-            <div id="appearance-button" class="modelviewer-panel-button small checked" onclick="showTexture()">Appearance</div>
-            <div id="geometry-button" class="modelviewer-panel-button small" onclick="hideTexture()">Geometry</div>
+        <div style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        ">
+            <div class="x-handwriting" style="font-size: 1.3em; line-height: 1.4; margin-bottom: 20px;">
+                ${prompt}
+            </div>
+            <div class="x-section-title small" style="margin-top: 10px;">
+                <div class="x-gradient-font">Display Mode</div>
+            </div>
+            <div class="x-left-align" style="margin-top: 6px;">
+                <div id="appearance-button" class="modelviewer-panel-button small checked" onclick="showTexture()">Appearance</div>
+                <div id="geometry-button" class="modelviewer-panel-button small" onclick="hideTexture()">Geometry</div>
+            </div>
         </div>
-        <div class="x-flex-spacer"></div>
     `;
 }
 
