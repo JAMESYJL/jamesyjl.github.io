@@ -115,7 +115,7 @@
     box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
-    justify-content: center;e
+    justify-content: center;
     overflow-y: auto;
     user-select: text;
     font-size: 1px; 
