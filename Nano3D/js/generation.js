@@ -2,7 +2,7 @@ var edit_items = [
     {
     video:"../nano3d/video/2/src.mp4", 
     video2:"../nano3d/video/2/tar.mp4",
-    model:"../assets_glb/../nano3d/video/2/src.glb", 
+    model:"assets_glb/../nano3d/video/2/src.glb", 
     model2:"../assets_glb/../nano3d/video/2/tar.glb",
     source:"Nano3D", 
     text:"Make the backpack the boy is carrying bigger." },
@@ -18,8 +18,8 @@ var edit_items = [
     {
     video:"../nano3d/video/1/src.mp4", 
     video2:"../nano3d/video/1/tar.mp4",
-    model:"../assets_glb/../nano3d/video/1/src.glb", 
-    model2:"../assets_glb/../nano3d/video/1/tar.glb",
+    model:"assets_glb/../nano3d/video/1/src.glb", 
+    model2:"assets_glb/../nano3d/video/1/tar.glb",
     source:"Nano3D", 
     text:"remove the chimney" },
 
