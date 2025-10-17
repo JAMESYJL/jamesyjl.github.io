@@ -2,16 +2,16 @@ var edit_items = [
     {
     video:"../nano3d/video/2/src.mp4", 
     video2:"../nano3d/video/2/tar.mp4",
-    model:"Nano3D/nano3d/video/2/src.glb", 
-    model2:"Nano3D/nano3d/video/2/tar.glb",
+    model:"nano3d/video/2/src.glb", 
+    model2:"nano3d/video/2/tar.glb",
     source:"Nano3D", 
     text:"Make the backpack the boy is carrying bigger." },
 
     {
     video:"../nano3d/video/4/src.mp4", 
     video2:"../nano3d/video/4/tar.mp4",
-    model:"../nano3d/video/4/src.glb", 
-    model2:"../nano3d/video/4/tar.glb",
+    model:"nano3d/video/4/src.glb", 
+    model2:"nano3d/video/4/tar.glb",
     source:"Nano3D", 
     text:"Replace the blue jacket with a brown down jacket." },
 
