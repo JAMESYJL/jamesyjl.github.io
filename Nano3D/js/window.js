@@ -304,7 +304,7 @@ function downloadGLB() {
 
 function edit_asset_panel_template(prompt, text) {
     return `
-         <div class="modelviewer-panel-prompt2">
+         <div class="modelviewer-panel-prompt">
             ${prompt}
          </div>
         <div class="x-section-title small"><div class="x-gradient-font">Display Mode</div></div>
