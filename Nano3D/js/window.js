@@ -316,41 +316,103 @@ function edit_asset_panel_template(prompt, text) {
     `;
 }
 
+// function edit_modelviewer_window_template(item, panel, config) {
+//     let viewer_size = config && config.viewer_size || 500;
+//     let panel_size = config && config.panel_size || 300;
+//     let show_annotations = config && config.show_annotations || false;
+//     html = `<div class="x-row" style="align-items: stretch; flex-wrap: wrap; width: ${viewer_size + viewer_size + panel_size + 64}px; max-width: calc(100vw - 32px);">
+//                 <div class="modelviewer-container" style="width: ${viewer_size * 0.65}px;">
+//                     <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
+//                         <div class="x-gradient-font">Source 3D</div>
+//                     </div>
+//                     <model-viewer
+//                         id="modelviewer"
+//                         src="${item.model}"
+//                         camera-controls
+//                         tone-mapping="natural"
+//                         shadow-intensity="1"
+//                         environment-image="assets_glb/env_maps/white.jpg"
+//                         exposure="${item.exposure || 5}"
+//                         camera-target="0m -0.10m 0m"
+//                         >
+//                     </model-viewer>
+//                 </div>
+//                 <div class="modelviewer-container" style="width: ${viewer_size * 0.65}px;">
+//                     <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
+//                         <div class="x-gradient-font">Nano3D (Ours)</div>
+//                     </div>
+//                     <model-viewer
+//                         id="modelviewer2"
+//                         src="${item.model2}"
+//                         camera-controls
+//                         tone-mapping="natural"
+//                         shadow-intensity="1"
+//                         environment-image="assets_glb/env_maps/white.jpg"
+//                         exposure="${item.exposure || 5}"
+//                         camera-target="0m -0.10m 0m"
+//                         >`
+//     if (show_annotations) {
+//         window_state.assets = item.assets;
+//         window_state.prompt_template = item.prompt_template;
+//         for (let i = 0; i < item.assets.length; i++) {
+//             html += `<button slot="hotspot-${i}" data-position="${item.assets[i].position.join(' ')}">${item.assets[i].name}</button>`;
+//         }
+//     }
+//     html += `        </model-viewer>
+//                 </div>
+//                 <div class="modelviewer-panel" style="flex: 1 1 ${panel_size}px;">
+//                     ${panel}
+//                 </div>
+//             </div>`;
+//     return html;
+// }
+
 function edit_modelviewer_window_template(item, panel, config) {
-    let viewer_size = config && config.viewer_size || 500;
-    let panel_size = config && config.panel_size || 300;
-    let show_annotations = config && config.show_annotations || false;
-    html = `<div class="x-row" style="align-items: stretch; flex-wrap: wrap; width: ${viewer_size + viewer_size + panel_size + 64}px; max-width: calc(100vw - 32px);">
-                <div class="modelviewer-container" style="width: ${viewer_size * 0.65}px;">
-                    <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
-                        <div class="x-gradient-font">Source 3D</div>
-                    </div>
-                    <model-viewer
-                        id="modelviewer"
-                        src="${item.model}"
-                        camera-controls
-                        tone-mapping="natural"
-                        shadow-intensity="1"
-                        environment-image="assets_glb/env_maps/white.jpg"
-                        exposure="${item.exposure || 5}"
-                        camera-target="0m -0.10m 0m"
-                        >
-                    </model-viewer>
+    let viewer_size = (config && config.viewer_size) || 500;
+    let panel_size  = (config && config.panel_size)  || 300;
+    let show_annotations = (config && config.show_annotations) || false;
+
+    html = `
+    <div class="x-row"
+         style="display:flex; flex-direction:column; align-items:stretch; gap:16px;
+                width:100%; max-width:calc(100vw - 32px);">
+
+        <!-- 顶部：两个 model-viewer 横向排列 -->
+        <div class="modelviewer-mesh-row"
+             style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:24px;">
+
+            <div class="modelviewer-container"
+                 style="flex:1 1 ${viewer_size * 0.65}px; min-width:320px;">
+                <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
+                    <div class="x-gradient-font">Source 3D</div>
                 </div>
-                <div class="modelviewer-container" style="width: ${viewer_size * 0.65}px;">
-                    <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
-                        <div class="x-gradient-font">Nano3D (Ours)</div>
-                    </div>
-                    <model-viewer
-                        id="modelviewer2"
-                        src="${item.model2}"
-                        camera-controls
-                        tone-mapping="natural"
-                        shadow-intensity="1"
-                        environment-image="assets_glb/env_maps/white.jpg"
-                        exposure="${item.exposure || 5}"
-                        camera-target="0m -0.10m 0m"
-                        >`
+                <model-viewer
+                    id="modelviewer"
+                    src="${item.model}"
+                    camera-controls
+                    tone-mapping="natural"
+                    shadow-intensity="1"
+                    environment-image="assets_glb/env_maps/white.jpg"
+                    exposure="${item.exposure || 5}"
+                    camera-target="0m -0.10m 0m">
+                </model-viewer>
+            </div>
+
+            <div class="modelviewer-container"
+                 style="flex:1 1 ${viewer_size * 0.65}px; min-width:320px;">
+                <div class="x-section-title small" style="display:flex; justify-content:center; align-items:center; width:100%;">
+                    <div class="x-gradient-font">Nano3D (Ours)</div>
+                </div>
+                <model-viewer
+                    id="modelviewer2"
+                    src="${item.model2}"
+                    camera-controls
+                    tone-mapping="natural"
+                    shadow-intensity="1"
+                    environment-image="assets_glb/env_maps/white.jpg"
+                    exposure="${item.exposure || 5}"
+                    camera-target="0m -0.10m 0m">`;
+
     if (show_annotations) {
         window_state.assets = item.assets;
         window_state.prompt_template = item.prompt_template;
@@ -358,11 +420,16 @@ function edit_modelviewer_window_template(item, panel, config) {
             html += `<button slot="hotspot-${i}" data-position="${item.assets[i].position.join(' ')}">${item.assets[i].name}</button>`;
         }
     }
-    html += `        </model-viewer>
-                </div>
-                <div class="modelviewer-panel" style="flex: 1 1 ${panel_size}px;">
-                    ${panel}
-                </div>
-            </div>`;
+
+    html += `   </model-viewer>
+            </div>
+        </div>
+
+        <!-- 底部：整块面板（Prompt + Display Mode + 按钮） -->
+        <div class="modelviewer-panel"
+             style="flex:0 0 auto; width:100%; min-height:${panel_size}px;">
+            ${panel}
+        </div>
+    </div>`;
     return html;
 }
