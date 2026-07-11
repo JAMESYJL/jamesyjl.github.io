@@ -100,7 +100,7 @@ pubFilters.forEach(filter => {
 // ============================================
 // Scroll Reveal Animation
 // ============================================
-const revealElements = document.querySelectorAll('.section, .pub-card, .timeline-item, .service-item');
+const revealElements = document.querySelectorAll('.section, .pub-card, .timeline-item');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -117,61 +117,6 @@ revealElements.forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
 });
-
-// ============================================
-// Hero Particles Background
-// ============================================
-function createParticles() {
-    const container = document.getElementById('particles');
-    if (!container) return;
-    
-    const particleCount = window.innerWidth > 768 ? 30 : 15;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        const size = Math.random() * 4 + 2;
-        const startX = Math.random() * 100;
-        const duration = Math.random() * 20 + 15;
-        const delay = Math.random() * 10;
-        
-        particle.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            border-radius: 50%;
-            background: rgba(108, 92, 231, ${Math.random() * 0.3 + 0.1});
-            left: ${startX}%;
-            top: 100%;
-            animation: floatUp ${duration}s ${delay}s linear infinite;
-        `;
-        
-        container.appendChild(particle);
-    }
-    
-    // Add keyframe animation dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-110vh) translateX(${Math.random() * 100 - 50}px);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-createParticles();
 
 // ============================================
 // Current Year in Footer

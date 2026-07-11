@@ -212,129 +212,77 @@ img {
    Hero Section
    ============================================ */
 #hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
-    padding-top: 64px;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-}
-
-.hero-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.12), transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(162, 155, 254, 0.08), transparent 50%);
-}
-
-[data-theme="dark"] .hero-gradient {
-    background:
-        radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.15), transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(162, 155, 254, 0.1), transparent 50%);
-}
-
-.hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    padding: 120px 0 60px;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: var(--max-width);
+    max-width: 760px;
     margin: 0 auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    align-items: center;
-    width: 100%;
-}
-
-.hero-greeting {
-    font-size: 1.1rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s 0.1s forwards;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 .hero-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
-    line-height: 1.1;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1.2;
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
     opacity: 0;
-    animation: fadeInUp 0.8s 0.2s forwards;
+    animation: fadeInUp 0.6s 0.1s forwards;
 }
 
 .hero-name-zh {
-    font-size: 1.8rem;
-    color: var(--text-secondary);
+    font-size: 1.3rem;
+    color: var(--text-muted);
     font-family: 'Lora', serif;
     margin-bottom: 1.5rem;
     opacity: 0;
-    animation: fadeInUp 0.8s 0.3s forwards;
+    animation: fadeInUp 0.6s 0.2s forwards;
 }
 
-.hero-tagline {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s 0.4s forwards;
-}
-
-.hero-desc {
-    font-size: 1.1rem;
+.hero-bio {
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
     opacity: 0;
-    animation: fadeInUp 0.8s 0.5s forwards;
+    animation: fadeInUp 0.6s 0.3s forwards;
 }
 
-.hero-desc strong {
+.hero-bio:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+.hero-bio a {
+    font-weight: 500;
+}
+
+.hero-bio strong {
     color: var(--text-primary);
 }
 
 .hero-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
+    margin-top: 1.5rem;
     opacity: 0;
-    animation: fadeInUp 0.8s 0.6s forwards;
+    animation: fadeInUp 0.6s 0.5s forwards;
 }
 
 .hero-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.6rem 1.25rem;
-    border-radius: 12px;
-    font-size: 0.95rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
     font-weight: 500;
     border: 1px solid var(--border);
     background: var(--bg-card);
@@ -343,116 +291,16 @@ img {
 }
 
 .hero-link:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-accent);
     border-color: var(--accent);
     color: var(--accent);
 }
 
-.hero-link.email:hover { color: #ea4335; border-color: #ea4335; box-shadow: 0 8px 30px rgba(234,67,53,0.15); }
+.hero-link.email:hover { color: #ea4335; border-color: #ea4335; }
 .hero-link.github:hover { color: #333; border-color: #333; }
 [data-theme="dark"] .hero-link.github:hover { color: #fff; border-color: #fff; }
-.hero-link.scholar:hover { color: #4285f4; border-color: #4285f4; box-shadow: 0 8px 30px rgba(66,133,244,0.15); }
-
-/* Hero Visual Card */
-.hero-visual {
-    opacity: 0;
-    animation: fadeInUp 0.8s 0.7s forwards;
-}
-
-.hero-card {
-    position: relative;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    overflow: hidden;
-}
-
-.hero-card-glow {
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(108, 92, 231, 0.1), transparent 60%);
-    animation: rotate 20s linear infinite;
-}
-
-.hero-card-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2.2rem;
-    font-weight: 800;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-.hero-affiliations {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.affiliation {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-}
-
-.affiliation i {
-    width: 20px;
-    color: var(--accent);
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    opacity: 0;
-    animation: fadeInUp 1s 1s forwards;
-}
-
-.scroll-indicator a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    animation: bounce 2s infinite;
-}
+.hero-link.scholar:hover { color: #4285f4; border-color: #4285f4; }
 
 /* ============================================
    Sections
@@ -1014,21 +862,8 @@ footer {
    Responsive
    ============================================ */
 @media (max-width: 900px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero-visual {
-        max-width: 400px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
     .hero-name {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .section-title {
@@ -1067,29 +902,19 @@ footer {
     }
 
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-name-zh {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
-    .hero-tagline {
-        font-size: 1.1rem;
+    .hero-bio {
+        font-size: 0.95rem;
     }
 
     .hero-links {
         gap: 0.5rem;
-    }
-
-    .hero-link {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .hero-stats {
-        flex-direction: column;
-        gap: 1rem;
     }
 
     .publications-grid {
