@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junliang Ye | 叶俊良</title>
+    <meta name="description" content="Junliang Ye - Master's student at Tsinghua University. Research in computer vision, 3D AIGC, and multimodal large models.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">JL<span>Y</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+                <a href="#publications">Publications</a>
+                <a href="#services">Services</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Junliang Ye</h1>
+                <p class="hero-name-zh">叶俊良</p>
+                <p class="hero-tagline">
+                    CS Master's Student @ Tsinghua University
+                </p>
+                <p class="hero-desc">
+                    Research in <strong>Computer Vision</strong>, <strong>3D AIGC</strong>,
+                    <strong>Multimodal Large Models</strong>, and <strong>Reinforcement Learning</strong>.
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:yejunliang23@163.com" class="hero-link email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/JAMESYJL" target="_blank" class="hero-link github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://scholar.google.com" target="_blank" class="hero-link scholar">
+                        <i class="fas fa-graduation-cap"></i> Scholar
+                    </a>
+                    <a href="#" class="hero-link cv">
+                        <i class="fas fa-file-lines"></i> CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-glow"></div>
+                    <div class="hero-card-content">
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Papers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">9</span>
+                                <span class="stat-label">Top Venues</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">Spotlight</span>
+                            </div>
+                        </div>
+                        <div class="hero-affiliations">
+                            <div class="affiliation">
+                                <i class="fas fa-school"></i>
+                                <span>Tsinghua University</span>
+                            </div>
+                            <div class="affiliation">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Advised by Prof. Jun Zhu</span>
+                            </div>
+                            <div class="affiliation">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Beijing, China</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a third-year master's student in the Department of
+                        <a href="https://www.cs.tsinghua.edu.cn/index.htm" target="_blank">Computer Science</a>
+                        at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>,
+                        advised by Prof. <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank">Jun Zhu</a>.
+                    </p>
+                    <p>
+                        In 2022, I obtained my B.S. in the School of Mathematical Sciences at
+                        <a href="https://www.pku.edu.cn/" target="_blank">Peking University</a>.
+                    </p>
+                    <p>
+                        My research interests lie in <strong>computer vision</strong> (e.g., 3D AIGC and video generation),
+                        <strong>multimodal large models</strong> (e.g., native large models), and
+                        <strong>reinforcement learning from human feedback</strong> (DPO, GRPO).
+                    </p>
+                </div>
+                <div class="about-interests">
+                    <h3>Research Interests</h3>
+                    <div class="interest-tags">
+                        <span class="tag">3D AIGC</span>
+                        <span class="tag">Video Generation</span>
+                        <span class="tag">Multimodal LLMs</span>
+                        <span class="tag">Native Large Models</span>
+                        <span class="tag">RLHF / DPO / GRPO</span>
+                        <span class="tag">3D Editing</span>
+                        <span class="tag">Mesh Generation</span>
+                        <span class="tag">Embodied Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">News</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-06</div>
+                    <div class="timeline-content">
+                        <p>One paper on VLA is accepted by <a href="https://eccv.ecva.net/" target="_blank"><strong>ECCV 2026</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-04</div>
+                    <div class="timeline-content">
+                        <p>One paper on VLM is accepted by <a href="https://icml.cc/" target="_blank"><strong>ICML 2026</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-02</div>
+                    <div class="timeline-content">
+                        <p>One paper on 3D-UMM is accepted by <a href="https://cvpr.thecvf.com/" target="_blank"><strong>CVPRF 2026</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-02</div>
+                    <div class="timeline-content">
+                        <p>One paper on Video Generation is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83" target="_blank"><strong>TIP 2026</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026-01</div>
+                    <div class="timeline-content">
+                        <p>Two papers on 3D-MLLM and 3D-Editing are accepted by <a href="https://iclr.cc/" target="_blank"><strong>ICLR 2026</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025-09</div>
+                    <div class="timeline-content">
+                        <p>One paper on 3D-UMM is accepted by <a href="https://neurips.cc/" target="_blank"><strong>NeurIPS 2025</strong></a> <span class="badge badge-spotlight">Spotlight</span></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025-09</div>
+                    <div class="timeline-content">
+                        <p>One paper on 3D Generation is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank"><strong>TPAMI 2025</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025-06</div>
+                    <div class="timeline-content">
+                        <p>One paper on 3D Generation is accepted by <a href="https://iccv.thecvf.com/Conferences/2025/" target="_blank"><strong>ICCV 2025</strong></a>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024-07</div>
+                    <div class="timeline-content">
+                        <p>Two papers on 3D & 4D Generation are accepted by <a href="https://eccv.ecva.net/" target="_blank"><strong>ECCV 2024</strong></a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <p class="section-subtitle">* equal contribution &nbsp;&nbsp; † project leader</p>
+
+            <div class="pub-filters">
+                <button class="pub-filter active" data-filter="all">All</button>
+                <button class="pub-filter" data-filter="3d">3D Generation</button>
+                <button class="pub-filter" data-filter="llm">Multimodal LLM</button>
+                <button class="pub-filter" data-filter="rl">RLHF</button>
+                <button class="pub-filter" data-filter="video">Video</button>
+            </div>
+
+            <div class="publications-grid">
+                <!-- PhysForge -->
+                <div class="pub-card" data-category="3d">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/teaser_icml26.jpg" alt="PhysForge" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ICML 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">PhysForge: Generating Physics-Grounded 3D Assets for Interactive Virtual World</h3>
+                        <p class="pub-authors">
+                            Yunhan Yang*, Chunshi Wang*, <strong>Junliang Ye*</strong>, Yang Li, Zanxin Chen, Zehuan Huang, et al.
+                        </p>
+                        <p class="pub-venue">International Conference on Machine Learning (ICML), 2026</p>
+                        <p class="pub-abstract">
+                            A decoupled two-stage framework supported by PhysDB, a large-scale dataset of 150,000 assets with four-tier physical annotations.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://github.com/HKU-MMLab/PhysForge" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://hku-mmlab.github.io/PhysForge/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/HKU-MMLab/PhysForge?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UniVerse3D -->
+                <div class="pub-card" data-category="llm">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/teaser.png" alt="UniVerse3D" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>CVPR-F 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">UniVerse3D: Emerging Properties of Unified Multimodal Models in 3D Understanding and Generation</h3>
+                        <p class="pub-authors">
+                            <strong>Junliang Ye*</strong>, Zehuan Huang*, Yansong Qu*, Chunshi Wang, Yunhan Yang, Yang Li, et al.
+                        </p>
+                        <p class="pub-venue">CVPR FINDINGS Track, 2026</p>
+                        <p class="pub-abstract">
+                            We propose UniVerse3D, the first 3D Unified multimodal models.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Ye_UniVerse3D_Emerging_Properties_of_Unified_Multimodal_Models_in_3D_Understanding_CVPRF_2026_paper.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nano3D -->
+                <div class="pub-card" data-category="3d">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/nano3d.png" alt="Nano3D" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ICLR 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Nano3D: A Training-Free Approach for Efficient 3D Editing Without Masks</h3>
+                        <p class="pub-authors">
+                            <strong>Junliang Ye*</strong>, Shenghao Xie*, Ruowen Zhao, Zhengyi Wang, Hongyu Yan, Wenqiang Zu, et al.
+                        </p>
+                        <p class="pub-venue">International Conference on Learning Representations (ICLR), 2026</p>
+                        <p class="pub-abstract">
+                            A training-free framework for precise and coherent 3D object editing without masks.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2510.15019" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/JAMESYJL/Nano3D" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://jamesyjl.github.io/Nano3D/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/JAMESYJL/Nano3D?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part-X-MLLM -->
+                <div class="pub-card" data-category="llm">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/partxmllm2.png" alt="Part-X-MLLM" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ICLR 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">Part-X-MLLM: Part-aware 3D Multimodal Large Language Model</h3>
+                        <p class="pub-authors">
+                            Chunshi Wang*, <strong>Junliang Ye†*</strong>, Yunhan Yang*, Yang Li, Zizhuo Lin, Jun Zhu, et al.
+                        </p>
+                        <p class="pub-venue">International Conference on Learning Representations (ICLR), 2026</p>
+                        <p class="pub-abstract">
+                            A native 3D multimodal large language model that unifies diverse 3D tasks via structured, executable grammar.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2511.13647" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/AiEson/Part-X-MLLM" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://chunshi.wang/Part-X-MLLM/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/AiEson/Part-X-MLLM?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ShapeLLM-Omni -->
+                <div class="pub-card pub-card-spotlight" data-category="llm">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/shp.jpeg" alt="ShapeLLM-Omni" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>NeurIPS 2025</span>
+                            <span class="spotlight-badge">Spotlight</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">ShapeLLM-Omni: A Native Multimodal LLM for 3D Generation and Understanding</h3>
+                        <p class="pub-authors">
+                            <strong>Junliang Ye*</strong>, Zhengyi Wang*, Ruowen Zhao*, Shenghao Xie, Jun Zhu
+                        </p>
+                        <p class="pub-venue">NeurIPS 2025 &nbsp;<span class="badge badge-spotlight">Spotlight, top 3.2%</span></p>
+                        <p class="pub-abstract">
+                            A multimodal large model that integrates 3D generation, understanding, and editing capabilities.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2506.01853" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/JAMESYJL/ShapeLLM-Omni" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://jamesyjl.github.io/ShapeLLM/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/JAMESYJL/ShapeLLM-Omni?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DeepMesh -->
+                <div class="pub-card" data-category="3d">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/pr_dm2.png" alt="DeepMesh" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ICCV 2025</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">DeepMesh: Auto-Regressive Artist-Mesh Creation With Reinforcement Learning</h3>
+                        <p class="pub-authors">
+                            Ruowen Zhao*, <strong>Junliang Ye*</strong>, Zhengyi Wang*, Guangce Liu, Yiwen Chen, Yikai Wang, et al.
+                        </p>
+                        <p class="pub-venue">IEEE International Conference on Computer Vision (ICCV), 2025</p>
+                        <p class="pub-abstract">
+                            Generates meshes with intricate details and precise topology, surpassing SOTA in both precision and quality.
+                        </p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2503.15265" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/zhaorw02/DeepMesh" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://zhaorw02.github.io/DeepMesh/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/zhaorw02/DeepMesh?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DreamReward -->
+                <div class="pub-card" data-category="rl">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/pipeline.jpg" alt="DreamReward" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ECCV 2024</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">DreamReward: Aligning Human Preference in Text-to-3D Generation</h3>
+                        <p class="pub-authors">
+                            <strong>Junliang Ye*</strong>, Fangfu Liu*, Qixiu Li, Zhengyi Wang, Yikai Wang, Xinzhou Wang, et al.
+                        </p>
+                        <p class="pub-venue">European Conference on Computer Vision (ECCV), 2024</p>
+                        <p class="pub-abstract">
+                            A comprehensive framework to learn and improve text-to-3D models from human preference feedback.
+                        </p>
+                        <div class="pub-links">
+                            <a href="http://arxiv.org/abs/2403.14613" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/liuff19/DreamReward" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://jamesyjl.github.io/DreamReward/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                            <img src="https://img.shields.io/github/stars/liuff19/DreamReward?style=social" alt="stars" class="pub-stars">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Projects -->
+            <h3 class="subsection-title">Additional Projects</h3>
+            <div class="publications-grid">
+                <!-- ReconX -->
+                <div class="pub-card pub-card-compact" data-category="video">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/reconX.png" alt="ReconX" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>TIP 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model</h3>
+                        <p class="pub-authors">
+                            Fangfu Liu*, Wenqiang Sun*, Hanyang Wang*, Yikai Wang, Haowen Sun, <strong>Junliang Ye</strong>, et al.
+                        </p>
+                        <p class="pub-venue">IEEE Transactions on Image Processing (TIP), 2026</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2408.16767" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/liuff19/ReconX" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://liuff19.github.io/ReconX/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DreamReward-X -->
+                <div class="pub-card pub-card-compact" data-category="rl">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/pr.png" alt="DreamReward-X" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>TPAMI 2025</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">DreamReward-X: Boosting High-Quality 3D Generation with Human Preference Alignment</h3>
+                        <p class="pub-authors">
+                            Fangfu Liu, <strong>Junliang Ye</strong>, Hanyang Wang, Zhengyi Wang, Jun Zhu, Yueqi Duan
+                        </p>
+                        <p class="pub-venue">IEEE TPAMI, 2025</p>
+                        <div class="pub-links">
+                            <a href="https://jamesyjl.github.io/DreamReward/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AnimatableDreamer -->
+                <div class="pub-card pub-card-compact" data-category="3d">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/pipeline4.png" alt="AnimatableDreamer" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ECCV 2024</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">AnimatableDreamer: Text-Guided Non-rigid 3D Model Generation and Reconstruction</h3>
+                        <p class="pub-authors">
+                            Xinzhou Wang, Yikai Wang, <strong>Junliang Ye</strong>, Fucun Sun, Zhengyi Wang, Ling Wang, et al.
+                        </p>
+                        <p class="pub-venue">European Conference on Computer Vision (ECCV), 2024</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2312.03795" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://zz7379.github.io/AnimatableDreamer/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GEM -->
+                <div class="pub-card pub-card-compact" data-category="llm">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/gem.png" alt="GEM" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>ECCV 2026</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">GEM: Generative Supervision Helps Embodied Intelligence</h3>
+                        <p class="pub-authors">
+                            Ruowen Zhao, Bangguo Li, Zuyan Liu, Yinan Liang, <strong>Junliang Ye</strong>, et al.
+                        </p>
+                        <p class="pub-venue">European Conference on Computer Vision (ECCV), 2026</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2605.28548" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/zhaorw02/GEM" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://zhaorw02.github.io/GEM/" target="_blank" class="pub-link"><i class="fas fa-globe"></i> Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DeepMesh-v2 -->
+                <div class="pub-card pub-card-compact" data-category="3d">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/dp2.png" alt="DeepMesh-v2" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>arXiv 2025</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">DeepMesh-v2: Auto-Regressive Artist-Mesh Creation With Reinforcement Learning</h3>
+                        <p class="pub-authors">
+                            <strong>Junliang Ye*</strong>, Ruowen Zhao*, Zhengyi Wang*, Yikai Wang, Jun Zhu
+                        </p>
+                        <p class="pub-venue">arXiv preprint, 2025</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2503.15265" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://github.com/JAMESYJL/DeepMesh-v2" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRECVID -->
+                <div class="pub-card pub-card-compact" data-category="video">
+                    <div class="pub-image">
+                        <img src="https://jamesyjl.github.io/images/pipeline3-2.png" alt="TRECVID 2022" loading="lazy">
+                        <div class="pub-overlay">
+                            <span>1st Place</span>
+                        </div>
+                    </div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">PKU_WICT at TRECVID 2022: Disaster Scene Description and Indexing Task</h3>
+                        <p class="pub-authors">
+                            Yanzhe Chen, HsiaoYuan Hsu, <strong>Junliang Ye</strong>, Zhiwen Yang, Zishuo Wang, Xiangteng He, Yuxin Peng
+                        </p>
+                        <p class="pub-venue">TRECVID 2022 &nbsp;<span class="badge badge-gold">1st Place</span></p>
+                        <div class="pub-links">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Services -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Academic Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-review"></i></div>
+                    <div class="service-detail">
+                        <h3>Conference Reviewer</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">CVPR 2023</span>
+                            <span class="service-tag">ICLR 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-book"></i></div>
+                    <div class="service-detail">
+                        <h3>Journal Reviewer</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">IJCV 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="service-detail">
+                        <h3>Technical Committee</h3>
+                        <div class="service-tags">
+                            <span class="service-tag">SIGGRAPH Asia 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Junliang Ye</h3>
+                    <p>yejunliang23@163.com</p>
+                    <p>Department of Computer Science, Tsinghua University</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:yejunliang23@163.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/JAMESYJL" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://jamesyjl.github.io/" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Junliang Ye. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
