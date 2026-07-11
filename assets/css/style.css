@@ -545,6 +545,47 @@ img {
 }
 
 /* ============================================
+   Authorship Toggle
+   ============================================ */
+.pub-authorship {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.authorship-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-right: 0.25rem;
+}
+
+.authorship-btn {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.authorship-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.authorship-btn.active {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+/* ============================================
    Publication Cards
    ============================================ */
 .publications-grid {

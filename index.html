@@ -139,14 +139,19 @@
                 <button class="pub-filter active" data-filter="all">All</button>
                 <button class="pub-filter" data-filter="3d">3D Generation</button>
                 <button class="pub-filter" data-filter="llm">Multimodal LLM</button>
-                <button class="pub-filter" data-filter="rl">RLHF</button>
                 <button class="pub-filter" data-filter="vla">VLA</button>
                 <button class="pub-filter" data-filter="world">World Model</button>
             </div>
 
+            <div class="pub-authorship">
+                <span class="authorship-label">Authorship:</span>
+                <button class="authorship-btn active" data-authorship="all">All Papers</button>
+                <button class="authorship-btn" data-authorship="first">First Author / Co-first</button>
+            </div>
+
             <div class="publications-grid">
                 <!-- PhysForge -->
-                <div class="pub-card" data-category="vla">
+                <div class="pub-card" data-category="vla" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/teaser_icml26.jpg" alt="PhysForge" loading="lazy">
                         <div class="pub-overlay">
@@ -171,7 +176,7 @@
                 </div>
 
                 <!-- UniVerse3D -->
-                <div class="pub-card" data-category="llm">
+                <div class="pub-card" data-category="llm" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/teaser.png" alt="UniVerse3D" loading="lazy">
                         <div class="pub-overlay">
@@ -194,7 +199,7 @@
                 </div>
 
                 <!-- Nano3D -->
-                <div class="pub-card" data-category="3d">
+                <div class="pub-card" data-category="3d" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/nano3d.png" alt="Nano3D" loading="lazy">
                         <div class="pub-overlay">
@@ -220,7 +225,7 @@
                 </div>
 
                 <!-- Part-X-MLLM -->
-                <div class="pub-card" data-category="llm">
+                <div class="pub-card" data-category="llm" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/partxmllm2.png" alt="Part-X-MLLM" loading="lazy">
                         <div class="pub-overlay">
@@ -246,7 +251,7 @@
                 </div>
 
                 <!-- ShapeLLM-Omni -->
-                <div class="pub-card pub-card-spotlight" data-category="llm">
+                <div class="pub-card pub-card-spotlight" data-category="llm" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/shp.jpeg" alt="ShapeLLM-Omni" loading="lazy">
                         <div class="pub-overlay">
@@ -273,7 +278,7 @@
                 </div>
 
                 <!-- DeepMesh -->
-                <div class="pub-card" data-category="3d">
+                <div class="pub-card" data-category="3d" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/pr_dm2.png" alt="DeepMesh" loading="lazy">
                         <div class="pub-overlay">
@@ -299,7 +304,7 @@
                 </div>
 
                 <!-- DreamReward -->
-                <div class="pub-card" data-category="rl">
+                <div class="pub-card" data-category="3d" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/pipeline.jpg" alt="DreamReward" loading="lazy">
                         <div class="pub-overlay">
@@ -323,13 +328,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Additional Projects -->
-            <h3 class="subsection-title">Additional Projects</h3>
-            <div class="publications-grid">
                 <!-- ReconX -->
-                <div class="pub-card pub-card-compact" data-category="world">
+                <div class="pub-card" data-category="world" data-author="other">
                     <div class="pub-image">
                         <img src="assets/images/reconX.png" alt="ReconX" loading="lazy">
                         <div class="pub-overlay">
@@ -351,7 +352,7 @@
                 </div>
 
                 <!-- DreamReward-X -->
-                <div class="pub-card pub-card-compact" data-category="rl">
+                <div class="pub-card" data-category="3d" data-author="other">
                     <div class="pub-image">
                         <img src="assets/images/pr.png" alt="DreamReward-X" loading="lazy">
                         <div class="pub-overlay">
@@ -371,7 +372,7 @@
                 </div>
 
                 <!-- AnimatableDreamer -->
-                <div class="pub-card pub-card-compact" data-category="3d">
+                <div class="pub-card" data-category="3d" data-author="other">
                     <div class="pub-image">
                         <img src="assets/images/pipeline4.png" alt="AnimatableDreamer" loading="lazy">
                         <div class="pub-overlay">
@@ -392,7 +393,7 @@
                 </div>
 
                 <!-- GEM -->
-                <div class="pub-card pub-card-compact" data-category="vla">
+                <div class="pub-card" data-category="vla" data-author="other">
                     <div class="pub-image">
                         <img src="assets/images/gem.png" alt="GEM" loading="lazy">
                         <div class="pub-overlay">
@@ -414,7 +415,7 @@
                 </div>
 
                 <!-- DeepMesh-v2 -->
-                <div class="pub-card pub-card-compact" data-category="3d">
+                <div class="pub-card" data-category="3d" data-author="first">
                     <div class="pub-image">
                         <img src="assets/images/dp2.png" alt="DeepMesh-v2" loading="lazy">
                         <div class="pub-overlay">
@@ -434,24 +435,6 @@
                     </div>
                 </div>
 
-                <!-- TRECVID -->
-                <div class="pub-card pub-card-compact" data-category="world">
-                    <div class="pub-image">
-                        <img src="assets/images/pipeline3-2.png" alt="TRECVID 2022" loading="lazy">
-                        <div class="pub-overlay">
-                            <span>1st Place</span>
-                        </div>
-                    </div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">PKU_WICT at TRECVID 2022: Disaster Scene Description and Indexing Task</h3>
-                        <p class="pub-authors">
-                            Yanzhe Chen, HsiaoYuan Hsu, <strong>Junliang Ye</strong>, Zhiwen Yang, Zishuo Wang, Xiangteng He, Yuxin Peng
-                        </p>
-                        <p class="pub-venue">TRECVID 2022 &nbsp;<span class="badge badge-gold">1st Place</span></p>
-                        <div class="pub-links">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

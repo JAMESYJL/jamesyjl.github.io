@@ -63,37 +63,54 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// Publication Filters
+// Publication Filters (Category + Authorship)
 // ============================================
 const pubFilters = document.querySelectorAll('.pub-filter');
+const authorshipBtns = document.querySelectorAll('.authorship-btn');
 const pubCards = document.querySelectorAll('.pub-card');
+
+let currentCategory = 'all';
+let currentAuthorship = 'all';
+
+function applyFilters() {
+    pubCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const cardAuthor = card.getAttribute('data-author');
+
+        const categoryMatch = currentCategory === 'all' || cardCategory === currentCategory;
+        const authorMatch = currentAuthorship === 'all' || cardAuthor === currentAuthorship;
+
+        if (categoryMatch && authorMatch) {
+            card.style.display = '';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 50);
+        } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.display = 'none';
+            }, 300);
+        }
+    });
+}
 
 pubFilters.forEach(filter => {
     filter.addEventListener('click', () => {
-        // Update active filter
         pubFilters.forEach(f => f.classList.remove('active'));
         filter.classList.add('active');
-        
-        const category = filter.getAttribute('data-filter');
-        
-        // Filter cards with animation
-        pubCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            
-            if (category === 'all' || cardCategory === category) {
-                card.style.display = '';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 50);
-            } else {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
-            }
-        });
+        currentCategory = filter.getAttribute('data-filter');
+        applyFilters();
+    });
+});
+
+authorshipBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        authorshipBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentAuthorship = btn.getAttribute('data-authorship');
+        applyFilters();
     });
 });
 
